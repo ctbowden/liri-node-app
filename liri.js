@@ -26,7 +26,26 @@ var reqTitle = userRequest[3];
 switch(reqFunction) {
 	case "my-tweets":
 		// Call function for Twitter
+		var client = new twitter({
+  			consumer_key: twitterKeys.consumer_key,
+  			consumer_secret: twitterKeys.consumer_secret,
+  			access_token_key: twitterKeys.access_token_key,
+  			access_token_secret: twitterKeys.access_token_secret
+		});
 
+		// Get Tweets "statuses/user_timeline" looks at the authenticated user and grabs updates from their timeline 
+		client.get('statuses/user_timeline', function(error, tweets, response) {
+   			for (var i = 0; i < tweets.length; i++) {
+   				console.log("--------");
+   				console.log(tweets[i].created_at);
+   				console.log(tweets[i].text);
+   				console.log("--------");
+   			};
+   			
+   			if(error){
+   				console.log(error);
+   			}
+		});
 		//End Process
 		break;
 	case "spotify-this-song":
