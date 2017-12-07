@@ -22,6 +22,8 @@ var userRequest = process.argv;
 var reqFunction = userRequest[2];
 var reqTitle = userRequest[3];
 
+
+
 // Switch Statement to process user functionality
 switch(reqFunction) {
 	case "my-tweets":
@@ -49,23 +51,34 @@ switch(reqFunction) {
 		//End Process
 		break;
 	case "spotify-this-song":
+		if (reqTitle === undefined) {
+			reqTitle = "The Sign Ace of Base";
+		}
+
 		// Call function for Spotify
 		var spotify = new Spotify({
   			id: "ebe3b059468f47a1b09765a5d02d7a1c",
   			secret: "12cba4a1aafa4d899dbce4c83e7255e0"
   		});
- 
-		spotify
-  			.request('https://api.spotify.com/v1/search?q='+reqTitle+'&type=track')
-  			.then(function(data) {
-    			console.log(data); 
-  			})
-  			.catch(function(err) {
-    			console.error('Error occurred: ' + err); 
-  			});
+		
+		spotify.search({ type: 'track', query: reqTitle }, function(err, data) {
+  			if (err) {
+    			return console.log('Error occurred: ' + err);
+  			} 
+  			else {
+  				var songInfo = data.tracks.items[0];
+    			console.log("Song Title: " + songInfo.name);
+    			console.log("By Artist: " + songInfo.artists[0].name);
+    			console.log("From The Album: " + songInfo.album.name);
+                console.log("Hear a preview: " + songInfo.preview_url);
+  			}
+		});
 		//Break
 		break;
 	case "movie-this":
+		if (reqTitle === undefined) {
+			reqTitle = "Mr. Nobody";
+		}
 		// Call function for OMDB
 		request('http://www.omdbapi.com/?t=' + reqTitle + '&y=&plot=short&apikey=trilogy', function(error, response, body) {
 			// If the request is successful (i.e. if the response status code is 200)
