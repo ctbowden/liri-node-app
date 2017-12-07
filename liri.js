@@ -12,7 +12,7 @@ var twitter = require("twitter");
 // keys for twitter
 var twitterKeys = require("./keys.js");
 // Needed to handle "spotify-this-song" functionality
-var spotify = require("node-spotify-api");
+var Spotify = require("node-spotify-api");
 // Needed to handle "do-what-it-says"
 var fs = require("fs");
 
@@ -50,7 +50,19 @@ switch(reqFunction) {
 		break;
 	case "spotify-this-song":
 		// Call function for Spotify
-
+		var spotify = new Spotify({
+  			id: "ebe3b059468f47a1b09765a5d02d7a1c",
+  			secret: "12cba4a1aafa4d899dbce4c83e7255e0"
+  		});
+ 
+		spotify
+  			.request('https://api.spotify.com/v1/search?q='+reqTitle+'&type=track')
+  			.then(function(data) {
+    			console.log(data); 
+  			})
+  			.catch(function(err) {
+    			console.error('Error occurred: ' + err); 
+  			});
 		//Break
 		break;
 	case "movie-this":
