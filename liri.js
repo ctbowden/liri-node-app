@@ -22,8 +22,6 @@ var userRequest = process.argv;
 var reqFunction = userRequest[2];
 var reqTitle = userRequest[3];
 
-
-
 // Switch Statement to process user functionality
 switch(reqFunction) {
 	case "my-tweets":
@@ -37,16 +35,17 @@ switch(reqFunction) {
 
 		// Get Tweets "statuses/user_timeline" looks at the authenticated user and grabs updates from their timeline 
 		client.get('statuses/user_timeline', function(error, tweets, response) {
+   			// Handle the Error
+   			if(error){
+   				console.log(error);
+   			}   			
+   			// No error then cycle through tweets and display in console
    			for (var i = 0; i < tweets.length; i++) {
    				console.log("--------");
    				console.log(tweets[i].created_at);
    				console.log(tweets[i].text);
    				console.log("--------");
    			};
-   			
-   			if(error){
-   				console.log(error);
-   			}
 		});
 		//End Process
 		break;
@@ -55,24 +54,8 @@ switch(reqFunction) {
 			reqTitle = "The Sign Ace of Base";
 		}
 
-		// Call function for Spotify
-		var spotify = new Spotify({
-  			id: "ebe3b059468f47a1b09765a5d02d7a1c",
-  			secret: "12cba4a1aafa4d899dbce4c83e7255e0"
-  		});
-		
-		spotify.search({ type: 'track', query: reqTitle }, function(err, data) {
-  			if (err) {
-    			return console.log('Error occurred: ' + err);
-  			} 
-  			else {
-  				var songInfo = data.tracks.items[0];
-    			console.log("Song Title: " + songInfo.name);
-    			console.log("By Artist: " + songInfo.artists[0].name);
-    			console.log("From The Album: " + songInfo.album.name);
-                console.log("Hear a preview: " + songInfo.preview_url);
-  			}
-		});
+		song(reqTitle);
+
 		//Break
 		break;
 	case "movie-this":
@@ -92,8 +75,41 @@ switch(reqFunction) {
 		//Break
 		break;
 	case "do-what-it-says":
-		// Call readFile Function
+		fs.readFile("random.txt", "utf8", function(error, data){
+			if (error) {
+				return console.log(error);
+			}
 
+			var dataArr = data.split(",");
+			var doWhat = dataArr[0];
+			var doThis = dataArr[1];
+
+			if (doWhat === "spotify-this-song"){
+				song(doThis);
+			};
+		})
 		//Break
 		break;
+}
+
+//Spotify Function outside of switch statement to make it easier to handle "do-what-it-says"
+function song(arr) {
+	// Call function for Spotify
+	var spotify = new Spotify({
+  		id: "ebe3b059468f47a1b09765a5d02d7a1c",
+  		secret: "12cba4a1aafa4d899dbce4c83e7255e0"
+  	});
+	
+	spotify.search({ type: 'track', query: arr }, function(err, data) {
+  		if (err) {
+    		return console.log('Error occurred: ' + err);
+  		} 
+  		else {
+  			var songInfo = data.tracks.items[0];
+    		console.log("Song Title: " + songInfo.name);
+    		console.log("By Artist: " + songInfo.artists[0].name);
+    		console.log("From The Album: " + songInfo.album.name);
+            console.log("Hear a preview: " + songInfo.preview_url);
+  		}
+	});
 }
