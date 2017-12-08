@@ -1,0 +1,50 @@
+{"title":"Space Jam","year":"1996","imdb":"6.3","rotten":"38%","country":"USA","lang":"English","plot":"In a desperate attempt to win a basketball match and earn their freedom, the Looney Tunes seek the aid of retired basketball champion, Michael Jordan.","cast":"Michael Jordan, Wayne Knight, Theresa Randle, Manner Washington"}
+{"date":"Fri Dec 08 01:10:11 +0000 2017","tweet":"Last one, likely forever on this account.  I hope no one has been so unfortunate as to have stumbled upon this account."}
+{"date":"Fri Dec 08 01:09:34 +0000 2017","tweet":"We are who we R?"}
+{"date":"Fri Dec 08 01:09:05 +0000 2017","tweet":"Time Stand Still....YYZ.... GO and Listen."}
+{"date":"Fri Dec 08 01:08:36 +0000 2017","tweet":"Took like 16 tweets before I got my first advertisement in my feed... is that normal?"}
+{"date":"Fri Dec 08 01:09:25 +0000 2017","tweet":"Just 3 more tweets and I win a stuffy doll."}
+{"date":"Fri Dec 08 01:08:00 +0000 2017","tweet":"I'm just making it up as I go along."}
+{"date":"Fri Dec 08 01:07:48 +0000 2017","tweet":"Tragedy Strikes..."}
+{"date":"Fri Dec 08 01:06:58 +0000 2017","tweet":"Number 14:  We're still tweeting.... oh we oh we oh."}
+{"date":"Fri Dec 08 01:06:39 +0000 2017","tweet":"Number 13:  This is the second most evil of my tweets ever... the most evil will be Number 666."}
+{"date":"Fri Dec 08 01:06:00 +0000 2017","tweet":"Number 12:  Where ever you go, there you are."}
+{"date":"Fri Dec 08 01:05:36 +0000 2017","tweet":"Number 11:  Don't loan out your toothbrush."}
+{"date":"Fri Dec 08 01:04:58 +0000 2017","tweet":"HW is pretty much done."}
+{"date":"Fri Dec 08 01:04:49 +0000 2017","tweet":"Spent the afternoon on hw."}
+{"date":"Fri Dec 08 01:04:20 +0000 2017","tweet":"Confusion is nothing new"}
+{"date":"Fri Dec 08 01:04:09 +0000 2017","tweet":"Meetings are bad... two meetings are worse."}
+{"date":"Fri Dec 08 01:03:49 +0000 2017","tweet":"Work work work, toll for the man"}
+{"date":"Thu Dec 07 05:32:31 +0000 2017","tweet":"Well this is number five... maybe I'll continue."}
+{"date":"Thu Dec 07 05:32:11 +0000 2017","tweet":"Looks like my code is working.. do I really need 20 sample tweets?"}
+{"date":"Thu Dec 07 05:09:05 +0000 2017","tweet":"What a world, What a world"}
+{"date":"Thu Dec 07 05:08:02 +0000 2017","tweet":"Working on this coding project ... knocking out some sample tweets!"}
+{"title":"Tom Sawyer","artist":"Rush","album":"Moving Pictures (2011 Remaster)","preview_url":null}
+{"title":"The Sign","artist":"Ace of Base","album":"The Sign (US Album) [Remastered]","preview_url":"https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=ebe3b059468f47a1b09765a5d02d7a1c"}
+{"title":"Mr. Nobody","year":"2009","imdb":"7.9","rotten":"66%","country":"Belgium, Germany, Canada, France, USA, UK","lang":"English, Mohawk","plot":"A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.","cast":"Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham"}
+{"title":"I Want It That Way","artist":"Backstreet Boys","album":"The Hits--Chapter One","preview_url":"https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=ebe3b059468f47a1b09765a5d02d7a1c"}
+{"title":"I Want It That Way","artist":"Backstreet Boys","album":"The Hits--Chapter One","preview_url":"https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=ebe3b059468f47a1b09765a5d02d7a1c"}
+{"title":"Mr. Nobody","year":"2009","imdb":"7.9","rotten":"66%","country":"Belgium, Germany, Canada, France, USA, UK","lang":"English, Mohawk","plot":"A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.","cast":"Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham"}
+{"title":"Beetlejuice","year":"1988","imdb":"7.5","rotten":"82%","country":"USA","lang":"English","plot":"When a recently-deceased ghost couple find their now-vacant home invaded by an obnoxious family, they hire a sleazy ghost who gets rid of humans to help them.","cast":"Alec Baldwin, Geena Davis, Annie McEnroe, Maurice Page"}
+{"title":"The Sign","artist":"Ace of Base","album":"The Sign (US Album) [Remastered]","preview_url":"https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=ebe3b059468f47a1b09765a5d02d7a1c"}
+{"title":"Time Stand Still","artist":"Rush","album":"Hold Your Fire","preview_url":null}
+{"date":"Fri Dec 08 01:10:11 +0000 2017","tweet":"Last one, likely forever on this account.  I hope no one has been so unfortunate as to have stumbled upon this account."}
+{"date":"Fri Dec 08 01:09:34 +0000 2017","tweet":"We are who we R?"}
+{"date":"Fri Dec 08 01:09:05 +0000 2017","tweet":"Time Stand Still....YYZ.... GO and Listen."}
+{"date":"Fri Dec 08 01:09:25 +0000 2017","tweet":"Just 3 more tweets and I win a stuffy doll."}
+{"date":"Fri Dec 08 01:08:36 +0000 2017","tweet":"Took like 16 tweets before I got my first advertisement in my feed... is that normal?"}
+{"date":"Fri Dec 08 01:08:00 +0000 2017","tweet":"I'm just making it up as I go along."}
+{"date":"Fri Dec 08 01:07:48 +0000 2017","tweet":"Tragedy Strikes..."}
+{"date":"Fri Dec 08 01:06:58 +0000 2017","tweet":"Number 14:  We're still tweeting.... oh we oh we oh."}
+{"date":"Fri Dec 08 01:06:39 +0000 2017","tweet":"Number 13:  This is the second most evil of my tweets ever... the most evil will be Number 666."}
+{"date":"Fri Dec 08 01:06:00 +0000 2017","tweet":"Number 12:  Where ever you go, there you are."}
+{"date":"Fri Dec 08 01:05:36 +0000 2017","tweet":"Number 11:  Don't loan out your toothbrush."}
+{"date":"Fri Dec 08 01:04:58 +0000 2017","tweet":"HW is pretty much done."}
+{"date":"Fri Dec 08 01:04:49 +0000 2017","tweet":"Spent the afternoon on hw."}
+{"date":"Fri Dec 08 01:04:20 +0000 2017","tweet":"Confusion is nothing new"}
+{"date":"Fri Dec 08 01:04:09 +0000 2017","tweet":"Meetings are bad... two meetings are worse."}
+{"date":"Fri Dec 08 01:03:49 +0000 2017","tweet":"Work work work, toll for the man"}
+{"date":"Thu Dec 07 05:32:31 +0000 2017","tweet":"Well this is number five... maybe I'll continue."}
+{"date":"Thu Dec 07 05:32:11 +0000 2017","tweet":"Looks like my code is working.. do I really need 20 sample tweets?"}
+{"date":"Thu Dec 07 05:09:05 +0000 2017","tweet":"What a world, What a world"}
+{"date":"Thu Dec 07 05:08:02 +0000 2017","tweet":"Working on this coding project ... knocking out some sample tweets!"}

@@ -26,26 +26,28 @@ var reqTitle = userRequest[3];
 switch(reqFunction) {
 	case "my-tweets":
 		tweets();
-		//End Process
+		//Ready
 		break;
 	case "spotify-this-song":
 		song(reqTitle);
-		//Break
+		//Ready
 		break;
 	case "movie-this":
 		movie(reqTitle);
-		//Break
+		//Ready
 		break;
 	case "do-what-it-says":
 		fs.readFile("random.txt", "utf8", function(error, data){
 			if (error) {
 				return console.log(error);
 			}
-
+			// Data from file set to variable and split into an array at ","
 			var dataArr = data.split(",");
+			// variable that grabs position 0 in dataArr array which will be the switch arg below
 			var doWhat = dataArr[0];
+			// variable that grabs position 1 in dataArr array, will be arg passed to functions as a query value
 			var doThis = dataArr[1];
-
+			//Switch statement that repeats functionality from main statement to deal with whatever gets read in from random.txt
 			switch(doWhat){
 				case "spotify-this-song":
 					song(doThis);
@@ -58,10 +60,11 @@ switch(reqFunction) {
 					break;
 			};
 		});
-		//Break
+		//Ready
 		break;
 }
-
+// Functions
+// Twitter function that grabs user's tweets from their timeline and displays last 20 to console and writes tweets to logfile
 function tweets(){
 	// Call function for Twitter
 	var client = new twitter({
@@ -82,11 +85,16 @@ function tweets(){
    			console.log(tweets[i].created_at);
    			console.log(tweets[i].text);
    			console.log("--------");
+   			var tweetInfo = {
+   				date: tweets[i].created_at,
+   				tweet: tweets[i].text
+   			};
+   			logs(JSON.stringify(tweetInfo));
    		};
 	});
 }
 
-//Movie This Function
+//Movie This Function contacts OMDB with a query from user, then returns/logs some of the response if no user query default is Mr. Nobody
 function movie(arr) {
 	if (!arr) {
 		arr = "Mr. Nobody";
@@ -99,11 +107,25 @@ function movie(arr) {
 		console.log("----- Your Movie Information -----");
     	console.log("Title of the movie: " + JSON.parse(body).Title + "\nRelease Year: " + JSON.parse(body).Year + "\nIMDB Rating of the Movie: "+ JSON.parse(body).imdbRating + "\nRotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value + "\nCountry of Production: " + JSON.parse(body).Country + "\nLanguage: "+ JSON.parse(body).Language + "\nPlot: " + JSON.parse(body).Plot + "\nCast: "+ JSON.parse(body).Actors);
     	console.log("----- Enjoy the Show -----");
+    	// Log file functionality
+    	var movieLog = {
+    		title: JSON.parse(body).Title,
+    		year: JSON.parse(body).Year,
+    		imdb: JSON.parse(body).imdbRating,
+    		rotten: JSON.parse(body).Ratings[1].Value,
+    		country: JSON.parse(body).Country,
+    		lang: JSON.parse(body).Language,
+    		plot: JSON.parse(body).Plot,
+    		cast: JSON.parse(body).Actors
+    	};
+    	// Send data to the Log File
+    	logs(JSON.stringify(movieLog));
+
   		}
 	});
 }
 
-//Spotify Function outside of switch statement to make it easier to handle "do-what-it-says"
+//Spotify Functionality, contacts Spotify with song query, returns song data for top response and logs to console and log.txt
 function song(arr) {
 	if (!arr) {
 		arr = "The Sign Ace of Base";
@@ -120,10 +142,29 @@ function song(arr) {
   		} 
   		else {
   			var songInfo = data.tracks.items[0];
-    		console.log("Song Title: " + songInfo.name);
+  			// variable to hold info to be sent to logfile
+  			var songLog = {
+  				title: songInfo.name,
+  				artist: songInfo.artists[0].name,
+  				album: songInfo.album.name,
+  				preview_url: songInfo.preview_url
+  			};
+  			console.log("Song Title: " + songInfo.name);
     		console.log("By Artist: " + songInfo.artists[0].name);
     		console.log("From The Album: " + songInfo.album.name);
             console.log("Hear a preview: " + songInfo.preview_url);
+            //logging returns to file
+            logs(JSON.stringify(songLog));
   		}
+	});
+}
+
+//Appends data returned from various functions to a log.txt file
+function logs(arr){
+	fs.appendFile("log.txt", arr+"\n", function(err){
+		if (err){
+			return console.log(err);
+		}
+		console.log("Data Written to Log.");
 	});
 }
